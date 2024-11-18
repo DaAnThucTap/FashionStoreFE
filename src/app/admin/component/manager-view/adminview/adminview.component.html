@@ -1,0 +1,43 @@
+
+<div class="d-flex">
+    <div class="d-flex flex-column rounded shadow col-2">
+
+        <h1 class="fs-4 mt-5 text-center">QUẢN LÝ</h1>
+
+        <hr>
+        <div class=" m-1">
+            <button routerLink="/admin/managerProduct/listProduct" type="button" [class.active]="currentView=='managerFood'" (click)="activeButton('managerFood','')" class="btn btn-lg text-start shadow border  btn-light my-1 w-100">Quản lý sản phẩm</button>
+            <button routerLink="/admin/" type="button" [class.active]="currentView=='managerUser'" (click)="activeButton('managerUser','')" class="btn btn-lg text-start  shadow border  btn-light my-1 w-100">Quản lý người dùng</button>
+            
+            <button routerLink="/admin" [class.active]="currentView=='managerTable'" (click)="activeButton('managerTable','')" type="button" class="btn btn-lg text-start shadow border  active btn-light my-1 w-100">Quản lý đơn hàng</button>
+            <button routerLink="/admin/" [class.active]="currentView=='managerVoucher'" (click)="activeButton('managerVoucher','')" type="button" class="btn btn-lg text-start shadow border  active btn-light my-1 w-100">Quản lý yêu thích</button>
+            </div>
+            <div class="my-2"></div>
+            <div class=" pt-4 mt-5 ">
+                <button type="button" class="btn btn-lg text-start shadow border  btn-light my-2 w-100">Tổng quan</button>
+                <button type="button" class="btn btn-lg text-start shadow border  btn-light my-2 w-100">Thống kê</button>
+              
+            </div>
+       
+
+    </div>
+    <div class="col-10">
+        <ul class="nav justify-content-between">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Logo</a>
+            </li>
+            <div class="btn-group">
+                <a type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  UserName
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                  <li><button class="dropdown-item" type="button">Another action</button></li>
+                  <li><button class="dropdown-item" type="button">Something else here</button></li>
+                </ul>
+              </div>
+           
+          </ul>
+        <router-outlet />
+    </div>
+</div>
